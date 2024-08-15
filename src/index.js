@@ -232,6 +232,9 @@ setTimeout(() => {
     mainContent.classList.add('fadeIn');
     setTimeout(() => {
         mainContent.classList.remove('fadeIn');
-        audio.play();
     }, 500);
 }, 500);
+
+window.addEventListener('click', () => {
+    audio.play();
+})
