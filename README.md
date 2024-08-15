@@ -1,6 +1,6 @@
 # Restarant Page
 
-## A restaurant website created created following the curriculum of [The Odin Project](https://www.theodinproject.com/) using HTML, CSS & JavaScript, and bundled using Webpack
+## A restaurant website created following the curriculum of [The Odin Project](https://www.theodinproject.com/) using HTML, CSS & JavaScript, and bundled using Webpack
 ### The website is themed around the famous inn from [The Elder Scrolls V: Skyrim](https://elderscrolls.bethesda.net/en/skyrim10), capturing the essence and atmosphere of the iconic environment.
 ### You can view the project [here!](https://laldasji.github.io/restaurant-page/)
 
