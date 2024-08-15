@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --muddy: #e9e09f;
+    --olive-brown: #a7a058;
+    --brown: #8e7444;
+    --gray: #999886;
+    --peat-brown: #a66e53;
+    font-size: calc(20px + 1vw);
+}
+
+@font-face {
+    font-family: Balgruf;
+    src: url(./fonts/Balgruf.ttf);
+}
+
+@font-face {
+    font-family: Balgruf-italic;
+    src: url(./fonts/Balgruf-Italic.ttf);
+}
+
+body {
+    z-index: 99;
+    background-color: var(--muddy);
+    font-family: Balgruf;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: calc(100svh);
+    place-items: center;
+}
+
+body::before
+{
+    z-index: -1;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    background-image: url(./images/parchment\ texture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    width: min(1280px, 100%);
+    text-align: center;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    -webkit-text-stroke: 0.033rem var(--muddy);
+    font-weight: bold;
+    place-items: center;
+    font-size: 2rem;
+    background: url(./images/bannered-mare-background.jpg) no-repeat center;
+}
+
+nav {
+    z-index: inherit;
+    width: 100%;
+    font-size: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    & > div {
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        transition-duration: 0.5s;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        & .frame {
+            transition-duration: inherit;
+            width: 80%;
+            height: 0.1em;
+            border-radius: 1em;
+            border: 1px solid black;
+            background: var(--peat-brown);
+        }
+    }
+    & > div:hover {
+        text-shadow: 0.1em 0.1em 0.2em black;
+        background: rgba(0, 0, 0, 0.8);
+        & .frame {
+            box-shadow: 0.1em 0.1em 0.2em black;
+        }
+    }
+}
+
+#content
+{
+    width: min(1280px, 95%);
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    h1 {
+        text-align: center;
+    }
+}
+
+.forContacts
+{
+    display: grid;
+    place-items: center;
+}
+
+.emphasize {
+    height: 0.1rem;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin-bottom: 0.5rem;
+    background-color: var(--peat-brown);
+}
+
+.underline {
+    height: 0.05rem;
+    border: 1px solid var(--peat-brown);
+    border-radius: 1em;
+    background-color: var(--peat-brown);
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    & > .item
+    {
+        border: 5px double black;
+        padding: 0.5em;
+        display: grid;
+        font-size:xx-large;
+        h3 {
+            justify-self: center;
+        }
+        img {
+            width: 50%;
+            justify-self: center;
+        }
+        price {
+            color: var(--brown);
+            font-weight: bold;
+        }
+    }
+}
+
+#parchment {
+    z-index: -1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    display: block;
+    position: relative;
+    opacity: 0.5;
+    background-image: url(./images/contact-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#visitingCard {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 65%;
+    padding: 2.5%;
+    height: 65%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 4fr 3fr;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (max-aspect-ratio: 3 / 4) {
+    #visitingCard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+}
