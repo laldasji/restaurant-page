@@ -74,9 +74,12 @@ nav {
         justify-items: center;
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 1px;
+        cursor: pointer;
         & .frame {
             transition-duration: inherit;
             width: 80%;
+            min-width: none;
             height: 0.1em;
             border-radius: 1em;
             border: 1px solid black;
