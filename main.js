@@ -186,7 +186,7 @@ module.exports = __webpack_require__.p + "images/contact-page.21abcd8d.jpg";
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/map.9b8de23b.png";
+module.exports = __webpack_require__.p + "images/map.3bcbb2b8.png";
 
 /***/ }),
 
@@ -296,7 +296,7 @@ module.exports = __webpack_require__.p + "images/9.b2c6306a.jpg";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "images/parchment texture.3cbd5a81.jpg";
+module.exports = __webpack_require__.p + "images/parchment texture.1f7c290d.jpg";
 
 /***/ }),
 
